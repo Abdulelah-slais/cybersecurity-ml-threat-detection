@@ -49,6 +49,14 @@ The traffic classes include:
 
 The dataset contains network characteristics such as packet statistics, timing information, TCP flags, ports, and other network flow attributes.
 
+The Jupyter Notebook references the original dataset as:
+
+```text
+Dataset-Brief 1 Cyber.csv
+```
+
+The original dataset is not included in this repository. However, the repository includes the generated CSV output files from the completed machine learning analysis.
+
 ---
 
 ## Data Preparation
@@ -193,15 +201,13 @@ Traffic categories represented among the detected anomalies included:
 - Exploits
 - Other unusual network flows
 
-Some benign traffic was also identified as statistically unusual, demonstrating that anomaly detection can be used to support further security investigation rather than acting as a definitive malicious/benign classifier.
+Some benign traffic was also identified as statistically unusual, demonstrating that anomaly detection can support further security investigation rather than acting as a definitive malicious/benign classifier.
 
 ---
 
 ## Feature Analysis
 
 The project also analysed which network features influenced the classification models.
-
-Two approaches were used:
 
 ### SVM Feature Importance
 
@@ -265,6 +271,25 @@ Cybersecurity Network Traffic
 
 ---
 
+## Generated Results
+
+The repository includes the CSV output files generated from the completed machine learning analysis:
+
+| File | Description |
+|---|---|
+| `supervised_model_comparison.csv` | Performance comparison between supervised models |
+| `knn_per_class_report.csv` | KNN classification performance for each traffic class |
+| `svm_per_class_report.csv` | Linear SVM classification performance for each traffic class |
+| `svm_global_feature_importance.csv` | Global feature importance results from Linear SVM |
+| `svm_permutation_importance.csv` | Feature importance calculated using permutation analysis |
+| `anomaly_rate_by_label.csv` | Anomaly detection rate for each traffic label |
+| `anomaly_label_distribution_pct.csv` | Distribution of detected anomalies across traffic classes |
+| `top200_anomalies.csv` | Top 200 anomalous network flows identified by the anomaly detection model |
+
+These files provide the generated results and evaluation evidence from the completed analysis.
+
+---
+
 ## Technologies & Techniques
 
 - Python
@@ -309,14 +334,27 @@ cybersecurity-ml-threat-detection/
 
 - **`abdulelah.ipynb`** – Jupyter Notebook containing the machine learning implementation and analysis.
 - **`Ai.project.docx`** – Full project documentation and report.
-- **`supervised_model_comparison.csv`** – Comparison of supervised model performance.
-- **`knn_per_class_report.csv`** – KNN classification results by class.
-- **`svm_per_class_report.csv`** – SVM classification results by class.
-- **`svm_global_feature_importance.csv`** – SVM feature importance results.
-- **`svm_permutation_importance.csv`** – Permutation-based feature analysis.
-- **`anomaly_rate_by_label.csv`** – Anomaly detection rates by traffic label.
-- **`anomaly_label_distribution_pct.csv`** – Distribution of detected anomalies.
-- **`top200_anomalies.csv`** – Top 200 anomalous network flows identified during analysis.
+- **CSV result files** – Generated model evaluation, feature importance, classification, and anomaly detection outputs.
+
+---
+
+## Running the Notebook
+
+The implementation is available in:
+
+```text
+abdulelah.ipynb
+```
+
+The notebook can be viewed directly through GitHub.
+
+To reproduce the complete analysis, the original dataset referenced by the notebook is required:
+
+```text
+Dataset-Brief 1 Cyber.csv
+```
+
+The original dataset is not included in this repository. The generated output files from the completed analysis are included for review and demonstration.
 
 ---
 
@@ -329,7 +367,7 @@ This project provided practical experience in:
 - Data preprocessing and validation
 - Feature engineering
 - Multi-class classification
-- KNN and SVM
+- KNN and Linear SVM
 - Hyperparameter tuning
 - Cross-validation
 - Model evaluation
@@ -340,15 +378,17 @@ This project provided practical experience in:
 
 ---
 
-## Note
+## Documentation
 
-The Jupyter Notebook references the original dataset as:
+The repository includes:
 
-```text
-Dataset-Brief 1 Cyber.csv
-```
-
-The dataset is not included in this repository. The notebook and generated result files are provided for project documentation and demonstration purposes.
+- The complete Jupyter Notebook
+- Full project report
+- Supervised model comparison results
+- Per-class classification reports
+- Feature importance analysis
+- Anomaly detection results
+- Top detected anomalies
 
 ---
 
